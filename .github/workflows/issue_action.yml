@@ -1,0 +1,8 @@
+name: issue workflow
+on: [issues]
+jobs:
+  issue_job:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: issue_details
+        run: echo "issue details: ${{ github.event.issue.title }} - ${{ github.event.issue.body }}"
